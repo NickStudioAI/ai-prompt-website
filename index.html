@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Prompt Studio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0f;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 24px 8%;
+            border-bottom: 1px solid #29292f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            margin: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: white;
+            color: black;
+        }
+
+        .secondary {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 8%;
+        }
+
+        .card {
+            border: 1px solid #29292f;
+            background: #141419;
+            border-radius: 14px;
+            padding: 35px;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            border-top: 1px solid #29292f;
+        }
+
+        @media (max-width: 800px) {
+            .sections {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AI Prompt Studio</div>
+
+    <nav>
+        <a href="#">Prompt Library</a>
+        <a href="#">Image / Poster</a>
+        <a href="#">AI Video</a>
+        <a href="#">Pricing</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>AI Prompt Studio</h1>
+
+    <p>
+        Koleksi prompt AI untuk menghasilkan gambar, poster
+        dan video dengan lebih mudah dan pantas.
+    </p>
+
+    <div class="buttons">
+        <a href="#" class="button primary">Mula Secara Percuma</a>
+        <a href="#" class="button secondary">Lihat Prompt</a>
+    </div>
+
+</section>
+
+<section class="sections">
+
+    <div class="card">
+        <h2>🖼️ Prompt Library</h2>
+        <p>
+            Cari dan salin prompt untuk menghasilkan gambar,
+            poster dan video AI.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🎨 AI Image & Poster</h2>
+        <p>
+            Masukkan prompt, pilih saiz dan kualiti,
+            kemudian hasilkan gambar atau poster.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🎬 AI Video</h2>
+        <p>
+            Gunakan prompt video dan pilih durasi
+            5s, 8s, 10s atau 15s.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 AI Prompt Studio
+</footer>
+
+</body>
+</html>
