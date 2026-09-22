@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image / Poster — Nick Studio AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #09090b;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            border-bottom: 1px solid #27272a;
+            padding: 18px 6%;
+        }
+
+        .navbar {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #d4d4d8;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* MAIN */
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 20px 100px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .title p {
+            color: #a1a1aa;
+            font-size: 17px;
+        }
+
+        /* GENERATOR */
+
+        .generator {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 25px;
+        }
+
+        .panel {
+            background: #141416;
+            border: 1px solid #29292e;
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .panel h2 {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            color: #d4d4d8;
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 250px;
+            resize: vertical;
+            background: #09090b;
+            border: 1px solid #3f3f46;
+            border-radius: 10px;
+            padding: 16px;
+            color: white;
+            font-size: 15px;
+            line-height: 1.6;
+            outline: none;
+            margin-bottom: 25px;
+        }
+
+        textarea:focus {
+            border-color: #71717a;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            background: #09090b;
+            border: 1px solid #3f3f46;
+            border-radius: 9px;
+            color: white;
+            font-size: 15px;
+            margin-bottom: 22px;
+            outline: none;
+        }
+
+        .generate {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 9px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .generate:hover {
+            background: #e4e4e7;
+        }
+
+        /* SETTINGS */
+
+        .setting-row {
+            margin-bottom: 5px;
+        }
+
+        .usage {
+            margin-top: 30px;
+            padding: 18px;
+            border: 1px solid #29292e;
+            border-radius: 10px;
+            background: #0f0f11;
+        }
+
+        .usage-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .progress {
+            height: 8px;
+            background: #27272a;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 20%;
+            height: 100%;
+            background: #a1a1aa;
+        }
+
+        /* RESULT */
+
+        .result {
+            margin-top: 30px;
+            background: #141416;
+            border: 1px solid #29292e;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .result h2 {
+            margin-bottom: 20px;
+        }
+
+        .preview {
+            min-height: 350px;
+            border: 1px dashed #3f3f46;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #71717a;
+            background: #09090b;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #27272a;
+            padding: 35px;
+            text-align: center;
+            color: #71717a;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .generator {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .title h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            Nick Studio AI
+        </div>
+
+        <nav>
+            <a href="index.html">Prompt Library</a>
+            <a href="image.html">Image / Poster</a>
+            <a href="#">AI Video</a>
+            <a href="#">Pricing</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="title">
+
+        <h1>
+            Create Image / Poster
+        </h1>
+
+        <p>
+            Gunakan prompt AI untuk menghasilkan gambar dan poster.
+        </p>
+
+    </section>
+
+
+    <section class="generator">
+
+
+        <!-- PROMPT -->
+
+        <div class="panel">
+
+            <h2>
+                ✨ Your Prompt
+            </h2>
+
+            <label for="prompt">
+                Masukkan prompt anda
+            </label>
+
+            <textarea
+                id="prompt"
+                placeholder="Contoh: Create a highly photorealistic Malaysian doctor in a professional medical consultation room..."
+            ></textarea>
+
+            <button
+                class="generate"
+                onclick="generateImage()"
+            >
+                Generate Image
+            </button>
+
+        </div>
+
+
+        <!-- SETTINGS -->
+
+        <div class="panel">
+
+            <h2>
+                ⚙️ Settings
+            </h2>
+
+
+            <div class="setting-row">
+
+                <label>
+                    Jenis
+                </label>
+
+                <select id="type">
+
+                    <option value="image">
+                        Image
+                    </option>
+
+                    <option value="poster">
+                        Poster
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <label>
+                    Aspect Ratio
+                </label>
+
+                <select id="ratio">
+
+                    <option>
+                        1:1
+                    </option>
+
+                    <option>
+                        4:5
+                    </option>
+
+                    <option>
+                        9:16
+                    </option>
+
+                    <option>
+                        16:9
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <label>
+                    Quality
+                </label>
+
+                <select id="quality">
+
+                    <option>
+                        Standard
+                    </option>
+
+                    <option>
+                        HD
+                    </option>
+
+                    <option>
+                        4K
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="usage">
+
+                <div class="usage-title">
+
+                    <span>
+                        Free Image Usage
+                    </span>
+
+                    <span>
+                        10 / 50
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div class="progress-bar"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section class="result">
+
+        <h2>
+            Generated Result
+        </h2>
+
+        <div
+            class="preview"
+            id="result"
+        >
+            Hasil gambar akan muncul di sini.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Nick Studio AI
+
+</footer>
+
+
+<script>
+
+    function generateImage() {
+
+        const prompt =
+            document.getElementById("prompt").value;
+
+        const type =
+            document.getElementById("type").value;
+
+        const ratio =
+            document.getElementById("ratio").value;
+
+        const quality =
+            document.getElementById("quality").value;
+
+
+        if (!prompt.trim()) {
+
+            alert("Sila masukkan prompt terlebih dahulu.");
+
+            return;
+
+        }
+
+
+        document.getElementById("result").innerHTML =
+
+            "<div>" +
+
+            "<strong>Generator sedang disediakan.</strong>" +
+
+            "<br><br>" +
+
+            "Type: " + type +
+
+            "<br>" +
+
+            "Ratio: " + ratio +
+
+            "<br>" +
+
+            "Quality: " + quality +
+
+            "<br><br>" +
+
+            "Prompt anda telah diterima." +
+
+            "<br><br>" +
+
+            "<small>AI Image API akan disambungkan pada langkah seterusnya.</small>" +
+
+            "</div>";
+
+    }
+
+</script>
+
+</body>
+</html>
