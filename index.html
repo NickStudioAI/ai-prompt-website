@@ -1,400 +1,1164 @@
 <!DOCTYPE html>
 <html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nick Studio AI — Prompt Library</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nick Studio AI</title>
+
+    <meta
+        name="description"
+        content="Nick Studio AI - Prompt Library, AI Image, Poster dan AI Video"
+    >
+
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #09090b;
-            color: #ffffff;
+
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* NAVIGATION */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(9, 9, 11, 0.95);
-            border-bottom: 1px solid #27272a;
-            padding: 18px 6%;
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #09090b;
+
+            color: #ffffff;
+
+            line-height: 1.6;
+
         }
+
+
+        /* =====================================
+           HEADER
+        ===================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(9, 9, 11, 0.94);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom:
+                1px solid #27272a;
+
+        }
+
 
         .navbar {
+
             max-width: 1400px;
+
             margin: auto;
+
+            min-height: 72px;
+
+            padding:
+                0 5%;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
+
+        /* =====================================
+           LOGO
+        ===================================== */
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
         }
+
+
+        .logo-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #a1a1aa
+                );
+
+            color: #09090b;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 0 25px
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .logo-text {
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =====================================
+           NAVIGATION
+        ===================================== */
 
         nav {
+
             display: flex;
-            gap: 28px;
+
+            align-items: center;
+
+            gap: 27px;
+
         }
+
 
         nav a {
+
             color: #d4d4d8;
+
             text-decoration: none;
-            font-size: 15px;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+
         }
+
 
         nav a:hover {
-            color: white;
+
+            color: #ffffff;
+
         }
 
-        /* HERO */
-        .hero {
-            max-width: 1200px;
-            margin: auto;
-            padding: 90px 20px 60px;
-            text-align: center;
+
+        .nav-pricing {
+
+            padding:
+                9px 15px;
+
+            border:
+                1px solid #3f3f46;
+
+            border-radius: 8px;
+
         }
+
+
+        .nav-pricing:hover {
+
+            background: #18181b;
+
+        }
+
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .hero {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding:
+                105px 20px 90px;
+
+            text-align: center;
+
+        }
+
 
         .hero-badge {
+
             display: inline-block;
-            border: 1px solid #3f3f46;
+
+            padding:
+                7px 15px;
+
+            margin-bottom: 25px;
+
+            border:
+                1px solid #3f3f46;
+
             background: #18181b;
-            padding: 8px 15px;
+
             border-radius: 30px;
-            font-size: 13px;
+
             color: #d4d4d8;
-            margin-bottom: 22px;
+
+            font-size: 13px;
+
         }
+
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 76px);
+
+            font-size:
+                clamp(45px, 7vw, 78px);
+
             line-height: 1.05;
-            margin-bottom: 22px;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+
         }
+
 
         .hero h1 span {
+
             color: #a1a1aa;
+
         }
+
 
         .hero p {
-            max-width: 700px;
+
+            max-width: 720px;
+
             margin: auto;
+
             color: #a1a1aa;
+
             font-size: 18px;
-            line-height: 1.7;
+
         }
+
 
         .hero-buttons {
-            margin-top: 32px;
+
+            margin-top: 35px;
+
         }
+
 
         .button {
+
             display: inline-block;
-            padding: 14px 25px;
-            border-radius: 9px;
-            text-decoration: none;
-            font-weight: 600;
+
+            padding:
+                14px 25px;
+
             margin: 5px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+
         }
+
 
         .button-primary {
-            background: white;
-            color: black;
+
+            background: #ffffff;
+
+            color: #000000;
+
         }
+
+
+        .button-primary:hover {
+
+            transform: translateY(-2px);
+
+        }
+
 
         .button-secondary {
-            border: 1px solid #3f3f46;
-            color: white;
+
+            border:
+                1px solid #3f3f46;
+
+            color: #ffffff;
+
         }
 
-        /* LIBRARY */
-        .library {
-            max-width: 1400px;
-            margin: auto;
-            padding: 40px 6% 90px;
+
+        .button-secondary:hover {
+
+            background: #18181b;
+
         }
+
+
+        /* =====================================
+           GENERAL SECTION
+        ===================================== */
+
+        .section {
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding:
+                75px 5%;
+
+        }
+
 
         .section-title {
+
             text-align: center;
-            margin-bottom: 45px;
+
+            margin-bottom: 40px;
+
         }
+
 
         .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
+
+            font-size: 40px;
+
+            line-height: 1.2;
+
+            margin-bottom: 10px;
+
         }
+
 
         .section-title p {
+
             color: #a1a1aa;
+
         }
 
-        /* SEARCH */
+
+        /* =====================================
+           PROMPT LIBRARY
+        ===================================== */
+
         .search-box {
+
             max-width: 700px;
-            margin: 0 auto 35px;
+
+            margin:
+                0 auto 25px;
+
         }
+
 
         .search-box input {
+
             width: 100%;
-            padding: 16px 18px;
+
+            padding:
+                15px 18px;
+
             background: #18181b;
-            border: 1px solid #3f3f46;
+
+            border:
+                1px solid #3f3f46;
+
             border-radius: 10px;
-            color: white;
-            font-size: 16px;
+
+            color: #ffffff;
+
+            font-size: 15px;
+
             outline: none;
+
         }
 
-        /* FILTER */
-        .filters {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
+
+        .search-box input:focus {
+
+            border-color: #71717a;
+
         }
+
+
+        .filters {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 40px;
+
+        }
+
 
         .filter {
-            padding: 9px 18px;
+
+            padding:
+                9px 20px;
+
+            border:
+                1px solid #3f3f46;
+
             border-radius: 30px;
-            border: 1px solid #3f3f46;
+
             background: #18181b;
+
             color: #d4d4d8;
+
             cursor: pointer;
+
+            font-size: 14px;
+
         }
+
 
         .filter.active {
-            background: white;
-            color: black;
+
+            background: #ffffff;
+
+            color: #000000;
+
         }
 
-        /* PROMPT GRID */
+
+        /* =====================================
+           PROMPT GRID
+        ===================================== */
+
         .prompt-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+
         }
+
 
         .prompt-card {
+
             background: #141416;
-            border: 1px solid #29292e;
+
+            border:
+                1px solid #29292e;
+
             border-radius: 16px;
+
             overflow: hidden;
-            transition: 0.2s;
+
+            transition: 0.25s;
+
         }
+
 
         .prompt-card:hover {
-            transform: translateY(-4px);
+
+            transform:
+                translateY(-4px);
+
             border-color: #52525b;
+
         }
+
 
         .prompt-image {
-            height: 230px;
-            background: linear-gradient(135deg, #27272a, #18181b);
+
+            height: 235px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #27272a,
+                    #18181b
+                );
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            font-size: 70px;
-            user-select: none;
+
+            font-size: 75px;
+
             cursor: pointer;
+
+            user-select: none;
+
         }
+
+
+        .prompt-image:hover {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #303036,
+                    #1c1c20
+                );
+
+        }
+
 
         .prompt-content {
+
             padding: 22px;
+
         }
+
 
         .prompt-type {
+
             color: #a1a1aa;
-            font-size: 12px;
+
+            font-size: 11px;
+
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 9px;
+
+            letter-spacing: 1.2px;
+
+            margin-bottom: 7px;
+
         }
+
 
         .prompt-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+
+            font-size: 21px;
+
+            margin-bottom: 9px;
+
         }
+
 
         .prompt-content p {
+
             color: #a1a1aa;
+
             font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 18px;
+
+            margin-bottom: 20px;
+
         }
 
-        .plan {
-            display: inline-block;
-            font-size: 12px;
-            padding: 6px 10px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
 
-        .free {
-            background: #18351f;
-            color: #7ee2a8;
-        }
-
-        .pro {
-            background: #332b16;
-            color: #f5d67a;
-        }
-
-        .premium {
-            background: #321b35;
-            color: #e8a7f2;
-        }
+        /* =====================================
+           PROMPT BUTTONS
+        ===================================== */
 
         .copy-button {
+
             width: 100%;
-            border: 1px solid #3f3f46;
+
+            padding: 13px;
+
+            border:
+                1px solid #3f3f46;
+
             background: #18181b;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
+
+            color: #ffffff;
+
+            border-radius: 9px;
+
             cursor: pointer;
-            font-weight: 600;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+
         }
+
 
         .copy-button:hover {
+
             background: #27272a;
+
         }
+
 
         .locked-button {
+
             width: 100%;
-            border: 1px solid #3f3f46;
+
+            padding: 13px;
+
+            border:
+                1px solid #3f3f46;
+
             background: #27272a;
+
             color: #a1a1aa;
-            padding: 12px;
-            border-radius: 8px;
+
+            border-radius: 9px;
+
             cursor: pointer;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+
         }
 
-        /* NOTICE */
-        .notice {
-            max-width: 800px;
-            margin: 50px auto 0;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #29292e;
-            background: #111113;
-            border-radius: 12px;
+
+        .locked-button:hover {
+
+            background: #323236;
+
+            color: #ffffff;
+
+        }
+
+
+        /* =====================================
+           PRICING
+        ===================================== */
+
+        .pricing-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+        .pricing-card {
+
+            background: #141416;
+
+            border:
+                1px solid #29292e;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            position: relative;
+
+        }
+
+
+        .pricing-card.featured {
+
+            border-color: #71717a;
+
+            transform:
+                translateY(-5px);
+
+        }
+
+
+        .popular {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 18px;
+
+            font-size: 10px;
+
+            padding:
+                5px 9px;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            font-weight: 800;
+
+        }
+
+
+        .pricing-card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .pricing-description {
+
             color: #a1a1aa;
-            line-height: 1.6;
+
+            font-size: 14px;
+
+            min-height: 45px;
+
+            margin-bottom: 20px;
+
         }
 
-        /* FOOTER */
-        footer {
-            border-top: 1px solid #27272a;
-            padding: 35px;
+
+        .price {
+
+            font-size: 40px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .price span {
+
+            font-size: 14px;
+
+            color: #a1a1aa;
+
+            font-weight: normal;
+
+        }
+
+
+        .features {
+
+            list-style: none;
+
+            margin:
+                25px 0;
+
+        }
+
+
+        .features li {
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid #27272a;
+
+            color: #d4d4d8;
+
+            font-size: 14px;
+
+        }
+
+
+        .pricing-button {
+
+            display: block;
+
+            width: 100%;
+
             text-align: center;
-            color: #71717a;
+
+            padding: 13px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            border:
+                1px solid #3f3f46;
+
+            color: #ffffff;
+
+            background: #18181b;
+
         }
 
-        /* MOBILE */
+
+        .pricing-button:hover {
+
+            background: #27272a;
+
+        }
+
+
+        .pricing-button.primary {
+
+            background: #ffffff;
+
+            color: #000000;
+
+        }
+
+
+        /* =====================================
+           INFO SECTION
+        ===================================== */
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+        .info-card {
+
+            padding: 28px;
+
+            background: #141416;
+
+            border:
+                1px solid #29292e;
+
+            border-radius: 15px;
+
+        }
+
+
+        .info-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .info-card h3 {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .info-card p {
+
+            color: #a1a1aa;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+
+            border-top:
+                1px solid #27272a;
+
+            padding:
+                40px 20px;
+
+            text-align: center;
+
+            color: #71717a;
+
+            margin-top: 50px;
+
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
         @media (max-width: 900px) {
+
             .prompt-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
+
+
+            .pricing-grid {
+
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+
+            }
+
+
+            .info-grid {
+
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+
+            }
+
 
             nav {
+
                 display: none;
+
             }
+
         }
+
 
         @media (max-width: 600px) {
+
             .prompt-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .hero {
-                padding-top: 60px;
+
+                padding:
+                    70px 20px;
+
             }
 
+
             .hero h1 {
-                font-size: 42px;
+
+                font-size: 43px;
+
             }
+
+
+            .logo-text {
+
+                font-size: 18px;
+
+            }
+
+
+            .logo-icon {
+
+                width: 37px;
+
+                height: 37px;
+
+                font-size: 19px;
+
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
 <header>
+
     <div class="navbar">
 
-        <div class="logo">
-            Nick Studio AI
-        </div>
+
+        <a
+            href="#"
+            class="brand"
+        >
+
+            <div class="logo-icon">
+                N
+            </div>
+
+            <div class="logo-text">
+                Nick Studio AI
+            </div>
+
+        </a>
+
 
         <nav>
-            <a href="#library">Prompt Library</a>
-            <a href="#">Image / Poster</a>
-            <a href="#">AI Video</a>
-            <a href="#">Pricing</a>
+
+            <a href="#library">
+                Prompt Library
+            </a>
+
+            <a href="image.html">
+                Image / Poster
+            </a>
+
+            <a href="#ai-video">
+                AI Video
+            </a>
+
+            <a
+                href="#pricing"
+                class="nav-pricing"
+            >
+                Pricing
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =====================================
+     HERO
+===================================== -->
+
 <section class="hero">
 
+
     <div class="hero-badge">
-        AI Prompt & Content Creation Studio
+
+        ✦ AI Prompt & Content Creation Studio
+
     </div>
 
+
     <h1>
-        Create Better With<br>
+
+        Create Better With
+
+        <br>
+
         <span>Nick Studio AI</span>
+
     </h1>
 
+
     <p>
-        Koleksi prompt AI untuk menghasilkan gambar,
-        poster dan video dengan lebih mudah dan pantas.
+
+        Koleksi prompt AI untuk menghasilkan
+        gambar, poster dan video dengan lebih
+        mudah dan pantas.
+
     </p>
 
+
     <div class="hero-buttons">
-        <a href="#library" class="button button-primary">
+
+        <a
+            href="#library"
+            class="button button-primary"
+        >
             Mula Secara Percuma
         </a>
 
-        <a href="#library" class="button button-secondary">
-            Lihat Prompt
+
+        <a
+            href="#pricing"
+            class="button button-secondary"
+        >
+            Lihat Pelan
         </a>
+
     </div>
+
 
 </section>
 
 
-<!-- PROMPT LIBRARY -->
-<section class="library" id="library">
+
+<!-- =====================================
+     PROMPT LIBRARY
+===================================== -->
+
+<section
+    class="section"
+    id="library"
+>
+
 
     <div class="section-title">
 
-        <h2>Prompt Library</h2>
+        <h2>
+            Prompt Library
+        </h2>
 
         <p>
-            Pilih prompt yang anda perlukan untuk projek AI anda.
+            Cari prompt untuk menghasilkan
+            gambar, poster dan video AI.
         </p>
 
     </div>
 
 
-    <!-- SEARCH -->
+
     <div class="search-box">
 
         <input
@@ -407,272 +1171,832 @@
     </div>
 
 
-    <!-- FILTER -->
+
     <div class="filters">
 
-        <button class="filter active" onclick="filterPrompts('all')">
+
+        <button
+            class="filter active"
+            onclick="filterPrompts('all', this)"
+        >
             Semua
         </button>
 
-        <button class="filter" onclick="filterPrompts('image')">
+
+        <button
+            class="filter"
+            onclick="filterPrompts('image', this)"
+        >
             Gambar
         </button>
 
-        <button class="filter" onclick="filterPrompts('poster')">
+
+        <button
+            class="filter"
+            onclick="filterPrompts('poster', this)"
+        >
             Poster
         </button>
 
-        <button class="filter" onclick="filterPrompts('video')">
+
+        <button
+            class="filter"
+            onclick="filterPrompts('video', this)"
+        >
             Video
         </button>
+
 
     </div>
 
 
-    <!-- PROMPT CARDS -->
-    <div class="prompt-grid" id="promptGrid">
+
+    <div
+        class="prompt-grid"
+        id="promptGrid"
+    >
 
 
-        <!-- PROMPT 1 -->
-        <div class="prompt-card" data-type="poster" data-name="poster kesihatan prostat">
+        <!-- =================================
+             FREE PROMPT
+        ================================= -->
+
+        <div
+            class="prompt-card"
+            data-type="poster"
+            data-name="poster kesihatan prostat"
+        >
+
 
             <div
                 class="prompt-image"
-                ondblclick="copyPrompt('Create a highly realistic Malaysian health poster about prostate wellness, professional medical composition, clean background, realistic Malaysian male, educational visual, vertical 1:1 composition, high detail.')"
+                ondblclick="copyPrompt(
+                    'Create a highly realistic Malaysian health poster about prostate wellness, professional medical composition, clean background, realistic Malaysian male, educational visual, vertical 1:1 composition, high detail.'
+                )"
                 title="Double-click untuk copy prompt"
             >
+
                 🩺
+
             </div>
 
+
             <div class="prompt-content">
+
 
                 <div class="prompt-type">
                     Poster
                 </div>
 
+
                 <h3>
                     Poster Kesihatan Prostat
                 </h3>
 
+
                 <p>
-                    Prompt poster kesihatan dengan gaya profesional
-                    dan realistik.
+                    Prompt poster kesihatan dengan
+                    gaya profesional dan realistik.
                 </p>
 
-                <span class="plan free">
-                    🔓 FREE
-                </span>
 
                 <button
                     class="copy-button"
-                    onclick="copyPrompt('Create a highly realistic Malaysian health poster about prostate wellness, professional medical composition, clean background, realistic Malaysian male, educational visual, vertical 1:1 composition, high detail.')"
+                    onclick="copyPrompt(
+                        'Create a highly realistic Malaysian health poster about prostate wellness, professional medical composition, clean background, realistic Malaysian male, educational visual, vertical 1:1 composition, high detail.'
+                    )"
                 >
+
                     Copy Prompt
+
                 </button>
+
 
             </div>
 
         </div>
 
 
-        <!-- PROMPT 2 -->
-        <div class="prompt-card" data-type="image" data-name="malaysian doctor">
+
+        <!-- =================================
+             LOCKED IMAGE
+        ================================= -->
+
+        <div
+            class="prompt-card"
+            data-type="image"
+            data-name="malaysian doctor"
+        >
+
 
             <div class="prompt-image">
+
                 👩‍⚕️
+
             </div>
 
+
             <div class="prompt-content">
+
 
                 <div class="prompt-type">
                     Image
                 </div>
 
+
                 <h3>
                     Malaysian Doctor
                 </h3>
 
+
                 <p>
-                    Prompt untuk menghasilkan portrait doktor
-                    Malaysia yang realistik.
+                    Prompt portrait doktor Malaysia
+                    yang lebih terperinci.
                 </p>
 
-                <span class="plan pro">
-                    🔒 PRO
-                </span>
 
                 <button
                     class="locked-button"
                     onclick="showUpgrade()"
                 >
-                    🔒 Unlock Prompt
+
+                    🔒 Prompt Terkunci
+
                 </button>
+
 
             </div>
 
         </div>
 
 
-        <!-- PROMPT 3 -->
-        <div class="prompt-card" data-type="video" data-name="ai product video">
+
+        <!-- =================================
+             LOCKED VIDEO
+        ================================= -->
+
+        <div
+            class="prompt-card"
+            data-type="video"
+            data-name="ai product video"
+        >
+
 
             <div class="prompt-image">
+
                 🎬
+
             </div>
 
+
             <div class="prompt-content">
+
 
                 <div class="prompt-type">
                     Video
                 </div>
 
+
                 <h3>
                     AI Product Video
                 </h3>
 
+
                 <p>
-                    Prompt video AI untuk iklan produk
-                    dengan gaya realistik.
+                    Prompt video AI untuk iklan
+                    produk dengan gaya realistik.
                 </p>
 
-                <span class="plan premium">
-                    🔒 PREMIUM
-                </span>
 
                 <button
                     class="locked-button"
                     onclick="showUpgrade()"
                 >
-                    🔒 Unlock Prompt
+
+                    🔒 Prompt Terkunci
+
                 </button>
+
 
             </div>
 
         </div>
 
-
-    </div>
-
-
-    <div class="notice">
-
-        💡 <strong>Tip:</strong>
-        Untuk prompt FREE, anda boleh klik
-        <strong>Copy Prompt</strong> atau
-        double-click pada gambar.
 
     </div>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =====================================
+     IMAGE / POSTER / VIDEO INTRO
+===================================== -->
+
+<section
+    class="section"
+    id="ai-video"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            AI Creation Tools
+        </h2>
+
+        <p>
+            Gunakan prompt anda untuk menghasilkan
+            kandungan AI.
+        </p>
+
+    </div>
+
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+
+            <div class="info-icon">
+                🖼️
+            </div>
+
+
+            <h3>
+                Image & Poster
+            </h3>
+
+
+            <p>
+                Masukkan prompt, pilih saiz
+                dan kualiti untuk menghasilkan
+                gambar atau poster.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="image.html"
+                class="pricing-button"
+            >
+                Buka Image / Poster
+            </a>
+
+
+        </div>
+
+
+
+        <div class="info-card">
+
+
+            <div class="info-icon">
+                🎬
+            </div>
+
+
+            <h3>
+                AI Video
+            </h3>
+
+
+            <p>
+                Masukkan prompt video dan
+                pilih durasi 5s, 8s, 10s
+                atau 15s.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="#pricing"
+                class="pricing-button"
+            >
+                AI Video
+            </a>
+
+
+        </div>
+
+
+
+        <div class="info-card">
+
+
+            <div class="info-icon">
+                📚
+            </div>
+
+
+            <h3>
+                Prompt Library
+            </h3>
+
+
+            <p>
+                Cari prompt gambar, poster
+                dan video yang telah disediakan
+                dalam library.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="#library"
+                class="pricing-button"
+            >
+                Lihat Prompt
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PRICING
+===================================== -->
+
+<section
+    class="section"
+    id="pricing"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            Studio AI Plans
+        </h2>
+
+
+        <p>
+            Pilih akses yang sesuai dengan
+            penggunaan anda.
+        </p>
+
+    </div>
+
+
+
+    <div class="pricing-grid">
+
+
+        <!-- PLUS -->
+
+        <div class="pricing-card">
+
+
+            <h3>
+                Studio AI Plus
+            </h3>
+
+
+            <p class="pricing-description">
+
+                Untuk pengguna yang memerlukan
+                akses tambahan.
+
+            </p>
+
+
+            <div class="price">
+
+                RM29
+
+                <span>
+                    / bulan
+                </span>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>
+                    ✓ Prompt Library tambahan
+                </li>
+
+                <li>
+                    ✓ Image / Poster sehingga 100 kali
+                </li>
+
+                <li>
+                    ✓ AI Video bulanan
+                </li>
+
+                <li>
+                    ✓ Video 5s, 8s, 10s & 15s
+                </li>
+
+                <li>
+                    ✓ Akses selama 1 bulan
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#"
+                class="pricing-button"
+                onclick="choosePlan('Studio AI Plus'); return false;"
+            >
+
+                Pilih Studio AI Plus
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- PRO -->
+
+        <div
+            class="pricing-card featured"
+        >
+
+
+            <div class="popular">
+                POPULAR
+            </div>
+
+
+            <h3>
+                Studio AI Pro
+            </h3>
+
+
+            <p class="pricing-description">
+
+                Untuk pengguna yang menghasilkan
+                kandungan AI dengan lebih kerap.
+
+            </p>
+
+
+            <div class="price">
+
+                RM59
+
+                <span>
+                    / bulan
+                </span>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>
+                    ✓ Prompt Library lebih luas
+                </li>
+
+                <li>
+                    ✓ Image / Poster sehingga 300 kali
+                </li>
+
+                <li>
+                    ✓ AI Video quota lebih tinggi
+                </li>
+
+                <li>
+                    ✓ Video 5s, 8s, 10s & 15s
+                </li>
+
+                <li>
+                    ✓ Akses selama 1 bulan
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#"
+                class="pricing-button primary"
+                onclick="choosePlan('Studio AI Pro'); return false;"
+            >
+
+                Pilih Studio AI Pro
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ULTRA -->
+
+        <div class="pricing-card">
+
+
+            <h3>
+                Studio AI Ultra
+            </h3>
+
+
+            <p class="pricing-description">
+
+                Untuk pengguna yang memerlukan
+                akses paling luas.
+
+            </p>
+
+
+            <div class="price">
+
+                RM99
+
+                <span>
+                    / bulan
+                </span>
+
+            </div>
+
+
+            <ul class="features">
+
+                <li>
+                    ✓ Semua Prompt Library
+                </li>
+
+                <li>
+                    ✓ Image / Poster sehingga 500 kali
+                </li>
+
+                <li>
+                    ✓ AI Video quota tertinggi
+                </li>
+
+                <li>
+                    ✓ Video 5s, 8s, 10s & 15s
+                </li>
+
+                <li>
+                    ✓ Akses penuh selama 1 bulan
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#"
+                class="pricing-button"
+                onclick="choosePlan('Studio AI Ultra'); return false;"
+            >
+
+                Pilih Studio AI Ultra
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
 <footer>
 
-    © 2026 Nick Studio AI
+    <strong>
+        Nick Studio AI
+    </strong>
+
+    <br><br>
+
+    AI Prompt • Image • Poster • Video
+
+    <br><br>
+
+    © 2026 Nick Studio AI. All rights reserved.
 
 </footer>
 
 
+
 <script>
 
-    /* COPY PROMPT */
+
+    /* =====================================
+       COPY PROMPT
+    ===================================== */
 
     function copyPrompt(prompt) {
 
-        navigator.clipboard.writeText(prompt);
+        navigator.clipboard
+            .writeText(prompt)
+            .then(function() {
 
-        alert("Prompt berjaya disalin!");
+                alert(
+                    "✓ Prompt berjaya disalin!"
+                );
+
+            })
+            .catch(function() {
+
+                alert(
+                    "Tidak dapat menyalin prompt."
+                );
+
+            });
 
     }
 
 
-    /* PREMIUM LOCK */
+
+    /* =====================================
+       LOCKED PROMPT
+    ===================================== */
 
     function showUpgrade() {
 
+        const answer = confirm(
+
+            "🔒 Prompt ini memerlukan pelan berbayar.\n\n" +
+
+            "Tekan OK untuk melihat Studio AI Plus, Pro dan Ultra."
+
+        );
+
+
+        if (answer) {
+
+            document
+                .getElementById("pricing")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+    }
+
+
+
+    /* =====================================
+       SEARCH
+    ===================================== */
+
+    function searchPrompts() {
+
+        const search =
+
+            document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+
+        const cards =
+
+            document
+                .querySelectorAll(".prompt-card");
+
+
+        cards.forEach(function(card) {
+
+
+            const name =
+
+                card
+                    .getAttribute("data-name")
+                    .toLowerCase();
+
+
+            if (
+                name.includes(search)
+            ) {
+
+                card.style.display = "";
+
+            }
+
+            else {
+
+                card.style.display = "none";
+
+            }
+
+
+        });
+
+    }
+
+
+
+    /* =====================================
+       FILTER
+    ===================================== */
+
+    function filterPrompts(
+        type,
+        button
+    ) {
+
+
+        const cards =
+
+            document
+                .querySelectorAll(".prompt-card");
+
+
+        const buttons =
+
+            document
+                .querySelectorAll(".filter");
+
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        });
+
+
+        button.classList.add(
+            "active"
+        );
+
+
+        cards.forEach(function(card) {
+
+
+            const cardType =
+
+                card
+                    .getAttribute("data-type");
+
+
+            if (
+                type === "all" ||
+                cardType === type
+            ) {
+
+                card.style.display = "";
+
+            }
+
+            else {
+
+                card.style.display = "none";
+
+            }
+
+
+        });
+
+    }
+
+
+
+    /* =====================================
+       PLAN
+    ===================================== */
+
+    function choosePlan(plan) {
+
+
         alert(
-            "🔒 Prompt ini dikunci.\n\n" +
-            "Upgrade ke Pro atau Premium untuk membuka prompt ini."
+
+            plan +
+
+            "\n\n" +
+
+            "Sistem pembayaran akan disambungkan kemudian."
+
         );
 
     }
 
 
-    /* SEARCH */
-
-    function searchPrompts() {
-
-        const search =
-            document
-            .getElementById("searchInput")
-            .value
-            .toLowerCase();
-
-        const cards =
-            document.querySelectorAll(".prompt-card");
-
-        cards.forEach(function(card) {
-
-            const name =
-                card
-                .getAttribute("data-name")
-                .toLowerCase();
-
-            if (name.includes(search)) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-
-    /* FILTER */
-
-    function filterPrompts(type) {
-
-        const cards =
-            document.querySelectorAll(".prompt-card");
-
-        const buttons =
-            document.querySelectorAll(".filter");
-
-        buttons.forEach(function(button) {
-
-            button.classList.remove("active");
-
-        });
-
-        event.target.classList.add("active");
-
-
-        cards.forEach(function(card) {
-
-            const cardType =
-                card.getAttribute("data-type");
-
-            if (type === "all" || cardType === type) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    }
-
 </script>
 
+
 </body>
+
 </html>
