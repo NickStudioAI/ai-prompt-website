@@ -180,6 +180,114 @@
             border-radius: 8px;
         }
 
+/* =====================================
+   OPENING VIDEO
+===================================== */
+
+.opening-video {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 75vh;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: #000000;
+}
+
+
+.opening-video video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.video-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.65)
+        );
+
+    z-index: 1;
+}
+
+
+.video-text {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    text-align: center;
+
+    width: 90%;
+}
+
+
+.video-text h2 {
+
+    font-size:
+        clamp(40px, 6vw, 75px);
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,0.6);
+}
+
+
+.video-text p {
+
+    font-size: 20px;
+
+    color: #e4e4e7;
+
+}
+
+
+/* =====================================
+   VIDEO MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .opening-video {
+
+        height: 65vh;
+
+        min-height: 400px;
+    }
+
 
         /* =====================================
            HERO
