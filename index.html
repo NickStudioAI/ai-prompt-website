@@ -2,6 +2,7 @@
 <html lang="ms">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -13,10 +14,15 @@
 
     <meta
         name="description"
-        content="Nick Studio AI - Prompt Library, AI Image, Poster dan AI Video"
+        content="Nick Studio AI - AI Image, Poster dan AI Video"
     >
 
+
     <style>
+
+        /* =====================================
+           ASAS
+        ===================================== */
 
         * {
             box-sizing: border-box;
@@ -35,7 +41,9 @@
                 sans-serif;
 
             background: #09090b;
+
             color: #ffffff;
+
             line-height: 1.6;
         }
 
@@ -45,45 +53,61 @@
         ===================================== */
 
         header {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
             background:
-                rgba(9, 9, 11, 0.94);
+                rgba(9, 9, 11, 0.95);
 
-            backdrop-filter: blur(14px);
+            backdrop-filter:
+                blur(14px);
 
             border-bottom:
                 1px solid #27272a;
         }
 
+
         .navbar {
+
             max-width: 1400px;
-            margin: auto;
 
             min-height: 72px;
+
+            margin: auto;
 
             padding:
                 0 5%;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
+
         .brand {
+
             display: flex;
+
             align-items: center;
 
             gap: 11px;
 
-            text-decoration: none;
             color: #ffffff;
+
+            text-decoration: none;
         }
 
+
         .logo-icon {
+
             width: 42px;
+
             height: 42px;
 
             border-radius: 11px;
@@ -98,25 +122,37 @@
             color: #09090b;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             font-size: 22px;
+
             font-weight: 900;
         }
 
+
         .logo-text {
+
             font-size: 21px;
+
             font-weight: 800;
         }
 
+
         nav {
+
             display: flex;
+
             align-items: center;
+
             gap: 27px;
         }
 
+
         nav a {
+
             color: #d4d4d8;
 
             text-decoration: none;
@@ -126,11 +162,15 @@
             transition: 0.2s;
         }
 
+
         nav a:hover {
+
             color: #ffffff;
         }
 
+
         .nav-pricing {
+
             padding:
                 9px 15px;
 
@@ -146,7 +186,9 @@
         ===================================== */
 
         .hero {
+
             max-width: 1200px;
+
             margin: auto;
 
             padding:
@@ -155,7 +197,9 @@
             text-align: center;
         }
 
+
         .hero-badge {
+
             display: inline-block;
 
             padding:
@@ -175,7 +219,9 @@
             font-size: 13px;
         }
 
+
         .hero h1 {
+
             font-size:
                 clamp(45px, 7vw, 78px);
 
@@ -186,11 +232,15 @@
             margin-bottom: 25px;
         }
 
+
         .hero h1 span {
+
             color: #a1a1aa;
         }
 
+
         .hero p {
+
             max-width: 720px;
 
             margin: auto;
@@ -200,11 +250,15 @@
             font-size: 18px;
         }
 
+
         .hero-buttons {
+
             margin-top: 35px;
         }
 
+
         .button {
+
             display: inline-block;
 
             padding:
@@ -219,28 +273,36 @@
             font-weight: 700;
         }
 
+
         .button-primary {
+
             background: #ffffff;
+
             color: #000000;
         }
 
+
         .button-secondary {
+
             border:
                 1px solid #3f3f46;
 
             color: #ffffff;
         }
 
+
         .button-secondary:hover {
+
             background: #18181b;
         }
 
 
         /* =====================================
-           GENERAL SECTION
+           SECTION
         ===================================== */
 
         .section {
+
             max-width: 1400px;
 
             margin: auto;
@@ -249,13 +311,17 @@
                 75px 5%;
         }
 
+
         .section-title {
+
             text-align: center;
 
             margin-bottom: 40px;
         }
 
+
         .section-title h2 {
+
             font-size: 40px;
 
             line-height: 1.2;
@@ -263,174 +329,8 @@
             margin-bottom: 10px;
         }
 
+
         .section-title p {
-            color: #a1a1aa;
-        }
-
-
-        /* =====================================
-           PROMPT LIBRARY
-        ===================================== */
-
-        .search-box {
-            max-width: 700px;
-
-            margin:
-                0 auto 25px;
-        }
-
-        .search-box input {
-            width: 100%;
-
-            padding:
-                15px 18px;
-
-            background: #18181b;
-
-            border:
-                1px solid #3f3f46;
-
-            border-radius: 10px;
-
-            color: #ffffff;
-
-            font-size: 15px;
-
-            outline: none;
-        }
-
-        .search-box input:focus {
-            border-color: #71717a;
-        }
-
-        .filters {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-bottom: 40px;
-        }
-
-        .filter {
-            padding:
-                9px 20px;
-
-            border:
-                1px solid #3f3f46;
-
-            border-radius: 30px;
-
-            background: #18181b;
-
-            color: #d4d4d8;
-
-            cursor: pointer;
-
-            font-size: 14px;
-        }
-
-        .filter.active {
-            background: #ffffff;
-
-            color: #000000;
-        }
-
-        .prompt-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 24px;
-        }
-
-        .prompt-card {
-            background: #141416;
-
-            border:
-                1px solid #29292e;
-
-            border-radius: 16px;
-
-            overflow: hidden;
-        }
-
-        .prompt-image {
-            height: 235px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #27272a,
-                    #18181b
-                );
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 75px;
-        }
-
-        .prompt-content {
-            padding: 22px;
-        }
-
-        .prompt-type {
-            color: #a1a1aa;
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.2px;
-
-            margin-bottom: 7px;
-        }
-
-        .prompt-content h3 {
-            font-size: 21px;
-
-            margin-bottom: 9px;
-        }
-
-        .prompt-content p {
-            color: #a1a1aa;
-
-            font-size: 14px;
-
-            margin-bottom: 20px;
-        }
-
-        .copy-button,
-        .locked-button {
-            width: 100%;
-
-            padding: 13px;
-
-            border:
-                1px solid #3f3f46;
-
-            border-radius: 9px;
-
-            cursor: pointer;
-
-            font-weight: 700;
-        }
-
-        .copy-button {
-            background: #18181b;
-
-            color: #ffffff;
-        }
-
-        .locked-button {
-            background: #27272a;
 
             color: #a1a1aa;
         }
@@ -441,156 +341,76 @@
         ===================================== */
 
         .info-grid {
+
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-
-            max-width: 1100px;
-
-            margin: auto;
-        }
-
-        .info-card {
-            padding: 28px;
-
-            background: #141416;
-
-            border:
-                1px solid #29292e;
-
-            border-radius: 15px;
-        }
-
-        .info-icon {
-            font-size: 35px;
-
-            margin-bottom: 15px;
-        }
-
-        .info-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .info-card p {
-            color: #a1a1aa;
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================
-           PRICING
-        ===================================== */
-
-        .pricing-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
+                repeat(2, 1fr);
 
             gap: 24px;
 
-            max-width: 1100px;
+            max-width: 900px;
 
             margin: auto;
         }
 
-        .pricing-card {
+
+        .info-card {
+
+            padding: 32px;
+
             background: #141416;
 
             border:
                 1px solid #29292e;
 
-            border-radius: 18px;
+            border-radius: 16px;
 
-            padding: 30px;
-
-            position: relative;
+            transition: 0.25s;
         }
 
-        .pricing-card.featured {
-            border-color: #71717a;
+
+        .info-card:hover {
+
+            border-color: #52525b;
 
             transform:
-                translateY(-5px);
+                translateY(-3px);
         }
 
-        .popular {
-            position: absolute;
 
-            top: 18px;
+        .info-icon {
 
-            right: 18px;
+            font-size: 45px;
 
-            font-size: 10px;
-
-            padding:
-                5px 9px;
-
-            border-radius: 20px;
-
-            background: #ffffff;
-
-            color: #000000;
-
-            font-weight: 800;
+            margin-bottom: 18px;
         }
 
-        .pricing-card h3 {
-            font-size: 25px;
+
+        .info-card h3 {
+
+            font-size: 24px;
 
             margin-bottom: 10px;
         }
 
-        .pricing-description {
+
+        .info-card p {
+
             color: #a1a1aa;
 
-            font-size: 14px;
-
-            min-height: 45px;
+            font-size: 15px;
 
             margin-bottom: 20px;
         }
 
-        .price {
-            font-size: 40px;
 
-            font-weight: 800;
-
-            margin-bottom: 5px;
-        }
-
-        .price span {
-            font-size: 14px;
-
-            color: #a1a1aa;
-
-            font-weight: normal;
-        }
-
-        .features {
-            list-style: none;
-
-            margin:
-                25px 0;
-        }
-
-        .features li {
-            padding:
-                9px 0;
-
-            border-bottom:
-                1px solid #27272a;
-
-            color: #d4d4d8;
-
-            font-size: 14px;
-        }
+        /* =====================================
+           BUTTON
+        ===================================== */
 
         .pricing-button {
+
             display: block;
 
             width: 100%;
@@ -611,12 +431,151 @@
             color: #ffffff;
 
             background: #18181b;
+
+            transition: 0.2s;
         }
 
+
+        .pricing-button:hover {
+
+            background: #27272a;
+        }
+
+
         .pricing-button.primary {
+
             background: #ffffff;
 
             color: #000000;
+        }
+
+
+        /* =====================================
+           PRICING
+        ===================================== */
+
+        .pricing-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .pricing-card {
+
+            background: #141416;
+
+            border:
+                1px solid #29292e;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            position: relative;
+        }
+
+
+        .pricing-card.featured {
+
+            border-color: #71717a;
+
+            transform:
+                translateY(-5px);
+        }
+
+
+        .popular {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 18px;
+
+            font-size: 10px;
+
+            padding:
+                5px 9px;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            font-weight: 800;
+        }
+
+
+        .pricing-card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .pricing-description {
+
+            color: #a1a1aa;
+
+            font-size: 14px;
+
+            min-height: 45px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .price {
+
+            font-size: 40px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+        }
+
+
+        .price span {
+
+            font-size: 14px;
+
+            color: #a1a1aa;
+
+            font-weight: normal;
+        }
+
+
+        .features {
+
+            list-style: none;
+
+            margin:
+                25px 0;
+        }
+
+
+        .features li {
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid #27272a;
+
+            color: #d4d4d8;
+
+            font-size: 14px;
         }
 
 
@@ -625,6 +584,7 @@
         ===================================== */
 
         footer {
+
             border-top:
                 1px solid #27272a;
 
@@ -640,56 +600,61 @@
 
 
         /* =====================================
-           MOBILE
+           TABLET
         ===================================== */
 
         @media (max-width: 900px) {
 
-            .prompt-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .info-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
             .pricing-grid {
+
                 grid-template-columns: 1fr;
 
                 max-width: 500px;
             }
 
             nav {
+
                 display: none;
             }
 
         }
 
 
+        /* =====================================
+           MOBILE
+        ===================================== */
+
         @media (max-width: 600px) {
 
-            .prompt-grid,
             .info-grid {
+
                 grid-template-columns: 1fr;
             }
 
+
             .hero {
+
                 padding:
                     70px 20px;
             }
 
+
             .hero h1 {
+
                 font-size: 43px;
             }
 
+
             .logo-text {
+
                 font-size: 18px;
             }
 
+
             .logo-icon {
+
                 width: 37px;
+
                 height: 37px;
 
                 font-size: 19px;
@@ -713,6 +678,7 @@
 
     <div class="navbar">
 
+
         <a
             href="#"
             class="brand"
@@ -731,30 +697,25 @@
 
         <nav>
 
-            <a href="#library">
-                Prompt Library
+            <a href="#ai-tools">
+                AI Tools
             </a>
 
             <a href="image.html">
                 Image / Poster
             </a>
 
-            <a href="#ai-video">
-                AI Video
-            </a>
-
-            <a
-                href="#pricing"
-                class="nav-pricing"
-            >
+            <a href="#pricing">
                 Pricing
             </a>
 
         </nav>
 
+
     </div>
 
 </header>
+
 
 
 <!-- =====================================
@@ -763,8 +724,11 @@
 
 <section class="hero">
 
+
     <div class="hero-badge">
+
         ✦ AI Prompt &amp; Content Creation Studio
+
     </div>
 
 
@@ -783,20 +747,23 @@
 
     <p>
 
-        Koleksi prompt AI untuk menghasilkan
-        gambar, poster dan video dengan lebih
-        mudah dan pantas.
+        Gunakan AI untuk menghasilkan
+        gambar, poster dan video dengan
+        lebih mudah dan pantas.
 
     </p>
 
 
     <div class="hero-buttons">
 
+
         <a
-            href="#library"
+            href="#ai-tools"
             class="button button-primary"
         >
-            Mula Secara Percuma
+
+            Mula Sekarang
+
         </a>
 
 
@@ -804,104 +771,17 @@
             href="#pricing"
             class="button button-secondary"
         >
+
             Lihat Pelan
+
         </a>
 
+
     </div>
+
 
 </section>
 
-
-<!-- =====================================
-     PROMPT LIBRARY
-===================================== -->
-
-<section
-    class="section"
-    id="library"
->
-
-
-    <div class="section-title">
-
-        <h2>
-            Prompt Library
-        </h2>
-
-        <p>
-            Cari prompt untuk menghasilkan
-            gambar, poster dan video AI.
-        </p>
-
-    </div>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari prompt..."
-            onkeyup="searchPrompts()"
-        >
-
-    </div>
-
-
-    <div class="filters">
-
-        <button
-            class="filter active"
-            onclick="filterPrompts('all', this)"
-        >
-            Semua
-        </button>
-
-
-        <button
-            class="filter"
-            onclick="filterPrompts('image', this)"
-        >
-            Gambar
-        </button>
-
-
-        <button
-            class="filter"
-            onclick="filterPrompts('poster', this)"
-        >
-            Poster
-        </button>
-
-
-        <button
-            class="filter"
-            onclick="filterPrompts('video', this)"
-        >
-            Video
-        </button>
-
-    </div>
-
-
-    <!--
-        SEMUA PROMPT CARD
-        LETAK DI SINI
-    -->
-
-    <div
-        class="prompt-grid"
-        id="promptGrid"
-    >
-
-
-        <!-- CONTOH PROMPT FREE -->
-
-        <div
-            class="prompt-card"
-            data-type="poster"
-            data-name="Poster Kesihatan Prostat"
-        >    
 
 
 <!-- =====================================
@@ -910,113 +790,111 @@
 
 <section
     class="section"
-    id="ai-video"
+    id="ai-tools"
 >
 
 
     <div class="section-title">
 
+
         <h2>
             AI Creation Tools
         </h2>
 
+
         <p>
-            Gunakan prompt anda untuk menghasilkan
-            kandungan AI.
+            Gunakan AI untuk menghasilkan
+            kandungan anda.
         </p>
 
+
     </div>
+
 
 
     <div class="info-grid">
 
 
+        <!-- IMAGE / POSTER -->
+
         <div class="info-card">
+
 
             <div class="info-icon">
                 🖼️
             </div>
 
+
             <h3>
                 Image &amp; Poster
             </h3>
 
+
             <p>
-                Masukkan prompt, pilih saiz dan
-                kualiti untuk menghasilkan gambar
-                atau poster.
+
+                Masukkan prompt, pilih saiz
+                dan hasilkan gambar atau
+                poster dengan mudah.
+
             </p>
 
-            <br>
 
             <a
                 href="image.html"
                 class="pricing-button"
             >
+
                 Buka Image / Poster
+
             </a>
+
 
         </div>
 
 
+
+        <!-- AI VIDEO -->
+
         <div class="info-card">
+
 
             <div class="info-icon">
                 🎬
             </div>
 
+
             <h3>
                 AI Video
             </h3>
 
+
             <p>
-                Masukkan prompt video dan pilih
-                durasi 5s, 8s, 10s atau 15s.
+
+                Masukkan prompt video dan
+                hasilkan video AI dengan
+                pilihan durasi.
+
             </p>
 
-            <br>
 
             <a
                 href="#pricing"
                 class="pricing-button"
             >
-                AI Video
+
+                Buka AI Video
+
             </a>
 
-        </div>
-
-
-        <div class="info-card">
-
-            <div class="info-icon">
-                📚
-            </div>
-
-            <h3>
-                Prompt Library
-            </h3>
-
-            <p>
-                Cari prompt gambar, poster dan
-                video yang telah disediakan
-                dalam library.
-            </p>
-
-            <br>
-
-            <a
-                href="#library"
-                class="pricing-button"
-            >
-                Lihat Prompt
-            </a>
 
         </div>
 
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================
@@ -1031,16 +909,20 @@
 
     <div class="section-title">
 
+
         <h2>
             Studio AI Plans
         </h2>
 
+
         <p>
-            Pilih akses yang sesuai dengan
-            penggunaan anda.
+            Pilih akses yang sesuai
+            dengan penggunaan anda.
         </p>
 
+
     </div>
+
 
 
     <div class="pricing-grid">
@@ -1050,13 +932,17 @@
 
         <div class="pricing-card">
 
+
             <h3>
                 Studio AI Plus
             </h3>
 
+
             <p class="pricing-description">
-                Untuk pengguna yang memerlukan
-                akses tambahan.
+
+                Untuk pengguna yang
+                memerlukan akses tambahan.
+
             </p>
 
 
@@ -1073,25 +959,31 @@
 
             <ul class="features">
 
+
                 <li>
                     ✓ Prompt Library tambahan
                 </li>
+
 
                 <li>
                     ✓ Image / Poster sehingga 100 kali
                 </li>
 
+
                 <li>
                     ✓ AI Video bulanan
                 </li>
+
 
                 <li>
                     ✓ Video 5s, 8s, 10s &amp; 15s
                 </li>
 
+
                 <li>
                     ✓ Akses selama 1 bulan
                 </li>
+
 
             </ul>
 
@@ -1099,17 +991,27 @@
             <a
                 href="#"
                 class="pricing-button"
-                onclick="choosePlan('Studio AI Plus'); return false;"
+                onclick="
+                    choosePlan('Studio AI Plus');
+                    return false;
+                "
             >
+
                 Pilih Studio AI Plus
+
             </a>
+
 
         </div>
 
 
+
         <!-- PRO -->
 
-        <div class="pricing-card featured">
+        <div
+            class="pricing-card featured"
+        >
+
 
             <div class="popular">
                 POPULAR
@@ -1122,8 +1024,11 @@
 
 
             <p class="pricing-description">
-                Untuk pengguna yang menghasilkan
-                kandungan AI dengan lebih kerap.
+
+                Untuk pengguna yang
+                menghasilkan kandungan AI
+                dengan lebih kerap.
+
             </p>
 
 
@@ -1140,25 +1045,31 @@
 
             <ul class="features">
 
+
                 <li>
                     ✓ Prompt Library lebih luas
                 </li>
+
 
                 <li>
                     ✓ Image / Poster sehingga 300 kali
                 </li>
 
+
                 <li>
                     ✓ AI Video quota lebih tinggi
                 </li>
+
 
                 <li>
                     ✓ Video 5s, 8s, 10s &amp; 15s
                 </li>
 
+
                 <li>
                     ✓ Akses selama 1 bulan
                 </li>
+
 
             </ul>
 
@@ -1166,17 +1077,25 @@
             <a
                 href="#"
                 class="pricing-button primary"
-                onclick="choosePlan('Studio AI Pro'); return false;"
+                onclick="
+                    choosePlan('Studio AI Pro');
+                    return false;
+                "
             >
+
                 Pilih Studio AI Pro
+
             </a>
 
+
         </div>
+
 
 
         <!-- ULTRA -->
 
         <div class="pricing-card">
+
 
             <h3>
                 Studio AI Ultra
@@ -1184,8 +1103,10 @@
 
 
             <p class="pricing-description">
-                Untuk pengguna yang memerlukan
-                akses paling luas.
+
+                Untuk pengguna yang
+                memerlukan akses paling luas.
+
             </p>
 
 
@@ -1202,25 +1123,31 @@
 
             <ul class="features">
 
+
                 <li>
                     ✓ Semua Prompt Library
                 </li>
+
 
                 <li>
                     ✓ Image / Poster sehingga 500 kali
                 </li>
 
+
                 <li>
                     ✓ AI Video quota tertinggi
                 </li>
+
 
                 <li>
                     ✓ Video 5s, 8s, 10s &amp; 15s
                 </li>
 
+
                 <li>
                     ✓ Akses penuh selama 1 bulan
                 </li>
+
 
             </ul>
 
@@ -1228,17 +1155,25 @@
             <a
                 href="#"
                 class="pricing-button"
-                onclick="choosePlan('Studio AI Ultra'); return false;"
+                onclick="
+                    choosePlan('Studio AI Ultra');
+                    return false;
+                "
             >
+
                 Pilih Studio AI Ultra
+
             </a>
+
 
         </div>
 
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================
@@ -1247,190 +1182,35 @@
 
 <footer>
 
+
     <strong>
         Nick Studio AI
     </strong>
 
-    <br><br>
-
-    AI Prompt • Image • Poster • Video
 
     <br><br>
+
+
+    AI Image • Poster • Video
+
+
+    <br><br>
+
 
     © 2026 Nick Studio AI.
     All rights reserved.
 
+
 </footer>
 
 
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
 <script>
 
-
-    /* =====================================
-       COPY PROMPT
-    ===================================== */
-
-    function copyPrompt(prompt) {
-
-        navigator.clipboard
-            .writeText(prompt)
-
-            .then(function() {
-
-                alert(
-                    "✓ Prompt berjaya disalin!"
-                );
-
-            })
-
-            .catch(function() {
-
-                alert(
-                    "Tidak dapat menyalin prompt."
-                );
-
-            });
-
-    }
-
-
-    /* =====================================
-       UPGRADE
-    ===================================== */
-
-    function showUpgrade() {
-
-        const answer = confirm(
-
-            "🔒 Prompt ini memerlukan pelan berbayar.\n\n" +
-
-            "Tekan OK untuk melihat Studio AI Plus, Pro dan Ultra."
-
-        );
-
-
-        if (answer) {
-
-            document
-                .getElementById("pricing")
-                .scrollIntoView({
-                    behavior: "smooth"
-                });
-
-        }
-
-    }
-
-
-    /* =====================================
-       SEARCH
-    ===================================== */
-
-    function searchPrompts() {
-
-        const search =
-            document
-                .getElementById("searchInput")
-                .value
-                .toLowerCase();
-
-
-        const cards =
-            document
-                .querySelectorAll(".prompt-card");
-
-
-        cards.forEach(function(card) {
-
-            const name =
-                card
-                    .getAttribute("data-name")
-                    .toLowerCase();
-
-
-            if (
-                name.includes(search)
-            ) {
-
-                card.style.display = "";
-
-            }
-
-            else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-
-    /* =====================================
-       FILTER
-    ===================================== */
-
-    function filterPrompts(
-        type,
-        button
-    ) {
-
-
-        const cards =
-            document
-                .querySelectorAll(".prompt-card");
-
-
-        const buttons =
-            document
-                .querySelectorAll(".filter");
-
-
-        buttons.forEach(function(btn) {
-
-            btn.classList.remove(
-                "active"
-            );
-
-        });
-
-
-        button.classList.add(
-            "active"
-        );
-
-
-        cards.forEach(function(card) {
-
-            const cardType =
-                card
-                    .getAttribute("data-type");
-
-
-            if (
-                type === "all" ||
-                cardType === type
-            ) {
-
-                card.style.display = "";
-
-            }
-
-            else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-
-    /* =====================================
-       PLAN
-    ===================================== */
 
     function choosePlan(plan) {
 
